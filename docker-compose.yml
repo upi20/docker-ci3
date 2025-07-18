@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  ci3-maxximum:
+    build: .
+    container_name: ci3-maxximum
+    ports:
+      - "5004:80"
+    volumes:
+      - ./src:/var/www/html
+    environment:
+      DB_HOST: host.docker.internal
